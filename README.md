@@ -3,6 +3,8 @@
 ## Description
 This is a simple text editor application that can be deployed through Heroku. 
 
+Deployed Link: 
+
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)! 
 
 ## Usage
@@ -23,6 +25,4 @@ Users can install this application to their local machine by:
 
 
 ## Screenshots
-![Preview of application in Insomnia](/assets/Screenshot%202023-05-04%20at%205.19.45%20PM.png)
-
-
+![Preview of application](/screenshot/Screenshot%202023-05-11%20at%2012.17.37%20AM.png)
