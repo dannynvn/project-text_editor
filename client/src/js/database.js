@@ -1,7 +1,9 @@
 import { openDB } from 'idb';
 
 const initdb = async () =>
+// create a new database called jate using version 1
   openDB('jate', 1, {
+    // if the database is new, create an object store called jate
     upgrade(db) {
       if (db.objectStoreNames.contains('jate')) {
         console.log('jate database already exists');
@@ -15,7 +17,27 @@ const initdb = async () =>
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => console.error('putDb not implemented');
 
+
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => console.error('getDb not implemented');
+export const getDb = async () => {
+  console.log('Retrieving content from database');
+
+  // create connection to database
+  const db = await openDB('jate', 1);
+
+  // create transaction to get content from database
+  const tx = db.transaction('jate', 'readonly');
+
+  // open object store
+  const store = tx.objectStore('jate');
+
+  // get all content from object store
+  const content = store.getAll();
+
+  // get confirmation of content retrieval
+  const result = await content;
+  console.log('result.value', result)
+  return result;
+};
 
 initdb();
