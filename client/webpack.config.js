@@ -53,9 +53,6 @@ module.exports = () => {
         ],
       }),
     ],
-    experiments: {
-      topLevelAwait: true,
-    },
     module: {
       rules: [
         {
