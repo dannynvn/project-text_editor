@@ -42,18 +42,20 @@ module.exports = () => {
         description: 'A simple text editor',
         background_color: '#ffffff',
         theme_color: '#ffffff',
-        start_url: './',
-        public_path: './',
+        start_url: '/',
+        public_path: '/',
         icons: [
           {
-          src: path.resolve('src/assets/icon.png'),
+          src: path.resolve('src/images/logo.png'),
           sizes: [96, 128, 192, 256, 384, 512],
           destination: path.join('assets', 'icons'),
           },
         ],
       }),
     ],
-
+    experiments: {
+      topLevelAwait: true,
+    },
     module: {
       rules: [
         {

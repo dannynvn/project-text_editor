@@ -15,7 +15,7 @@ const initdb = async () =>
   });
 
 // accepts some content and adds it to the database
-export const putDb = async (content) => console.error('putDb not implemented');
+export const putDb = async (content) => {
   console.log('Adding content to database');
 
   // create connection to database
@@ -28,12 +28,12 @@ export const putDb = async (content) => console.error('putDb not implemented');
   const store = tx.objectStore('jate');
 
   // update object store with content
-  const request = await store.put(content);
+  const request = store.put({ id: 1, value: content });
 
   // get confirmation of content addition
   const result = await request;
-  console.log('result', result);
-
+  console.log('result', result.value);
+};
 
 
 // gets all the content from the database
@@ -54,7 +54,7 @@ export const getDb = async () => {
 
   // get confirmation of content retrieval
   const result = await content;
-  console.log('result.value', result)
+  console.log('result.value', result.value)
   return result;
 };
 
