@@ -28,11 +28,11 @@ export const putDb = async (content) => {
   const store = tx.objectStore('jate');
 
   // update object store with content
-  const request = store.put({ id: 1, value: content });
+  const request = store.put({ value: content });
 
   // get confirmation of content addition
   const result = await request;
-  console.log('result', result.value);
+  console.log('result', result);
 };
 
 
@@ -54,8 +54,7 @@ export const getDb = async () => {
 
   // get confirmation of content retrieval
   const result = await content;
-  console.log('result.value', result.value)
-  return result;
+  console.log('result', result)
 };
 
 initdb();

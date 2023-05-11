@@ -12,8 +12,6 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      header: './src/js/header.js',
-      editor: './src/js/editor.js',
     },
     // output point for webpack
     output: {
@@ -30,7 +28,7 @@ module.exports = () => {
       // injects custom service worker into the webpack build
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'sw.js',
+        swDest: 'src-sw.js',
       }),
 
       // webpack plugin that generates a manifest.json file

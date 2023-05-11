@@ -25,7 +25,6 @@ butInstall.addEventListener('click', async () => {
 
     // reset the deferred prompt variable, since it can't be used again
     window.deferredPrompt = null;
-
     butInstall.classList.toggle('hidden', true);
 });
 
