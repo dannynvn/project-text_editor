@@ -22,6 +22,7 @@ butInstall.addEventListener('click', async () => {
 
     // Show the install prompt.
     promptEvent.prompt();
+    console.log('promptEvent', promptEvent);
 
     // reset the deferred prompt variable, since it can't be used again
     window.deferredPrompt = null;
