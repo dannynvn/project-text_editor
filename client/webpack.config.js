@@ -35,13 +35,13 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'JustAnotherTextEditor',
+        name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'A simple text editor',
         background_color: '#ffffff',
         theme_color: '#ffffff',
         start_url: '/',
-        public_path: '/',
+        publicPath: '/',
         icons: [
           {
           src: path.resolve('src/images/logo.png'),
