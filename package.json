@@ -1,12 +1,12 @@
 {
   "name": "jate",
   "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "engines": {
     "node": "16.19.1",
     "npm": "8.19.3"
   },
-  "description": "",
-  "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\" ",
     "start": "npm run build && cd server && node server.js",
@@ -19,7 +19,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "serve": "^13.0.2"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
